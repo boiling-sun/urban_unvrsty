@@ -2,7 +2,7 @@ def main():
     name = 'Anna'
     age = 31
     new_age = age + 1
-    is_student = bool(1)
+    is_student = True
     print(f'Name: {name}\n'+
           f'Age: {age}\n'+
           f'New Age: {new_age}\n'+
