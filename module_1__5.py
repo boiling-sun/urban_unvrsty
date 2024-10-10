@@ -6,10 +6,12 @@ def main():
     except TypeError:
         print('(1) According to data model sequences are distinguished by their mutability.')
         print('An object of an immutable sequence type cannot change once it is created.'
-              + 'They play an important role in places where a constant hash value is needed, for example as a key in a dictionary.', end='\n\n')
+              + 'They play an important role in places where a constant hash value is needed, '
+              + 'for example as a key in a dictionary.', end='\n\n')
         print(f'"immutable_var" reffers to {type(immutable_var)} which is immutable type.', end='\n\n')
     finally:
-        print('Tuple may contain references to other objects, these other objects may be mutable and may be changed as follows:')
+        print('Tuple may contain references to other objects, these other objects '
+              + 'may be mutable and may be changed as follows:')
         print(f'{immutable_var} --> ', end='')
         immutable_var[3].append('baz')
         print(f'{immutable_var}', end='\n\n')
