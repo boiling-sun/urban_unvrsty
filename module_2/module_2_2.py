@@ -14,16 +14,16 @@ def main():
     first = int(input('Enter first number: ').strip())
     second = int(input('Enter second number: ').strip())
     third = int(input('Enter third number: ').strip())
-    amount_of_numbers = len(set((first, second, third)))
-
-    if amount_of_numbers == 1:
+    amount_of_equal_numbers = len(set((first, second, third)))
+    
+    if amount_of_equal_numbers == 1:
         print(3)
-    elif amount_of_numbers == 2:
+    elif amount_of_equal_numbers == 2:
         print(2)
     else:
         print(0)
 
-#    match amount_of_numbers:
+#    match amount_of_equal_numbers:
 #        case 1:
 #            print(3)
 #        case 2:
