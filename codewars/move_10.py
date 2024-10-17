@@ -13,9 +13,6 @@ def move_ten(st):
 
 """
 
-
-import string
-
 def move_ten(st):
     switched = []
     ascii = string.ascii_lowercase
