@@ -2,4 +2,4 @@ some_stuff.py
 .DS_Store
 budget
 .venv
-
+__pycache__
