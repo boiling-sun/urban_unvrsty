@@ -42,7 +42,7 @@ def is_contains(string, list_to_search):
     Регистром строки при проверке пренебречь: UrbaN ~ URBAN.
     """
     count_calls()
-    return string.lower() in [i.lower() for i in list_to_search]
+    return string.lower() in [s.lower() for s in list_to_search]
 
 if __name__ == '__main__':
     main()
