@@ -24,7 +24,6 @@ def main():
     print(result2) # ['Able', 'Disable']
 
 def single_root_words(root_word, *other_words):
-    root_word = root_word.lower()
     # same_words = [word for word in other_words if re.search(word, root_word, re.IGNORECASE) or re.search(root_word, word, re.IGNORECASE)]
     same_words = []
     for word in other_words:
