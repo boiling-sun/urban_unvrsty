@@ -48,8 +48,8 @@ the array with finding any, so the function ends and return the definitive array
 ["DOWN","REPTILE","AMIDST","SOFA","SOLAR","PLANE","SILENCE","MARKDOWN"]
 """
 
-
-from itertools import cycle, islice
+# try for better solution:
+# from itertools import cycle, islice 
 
 
 def main():
