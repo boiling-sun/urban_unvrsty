@@ -18,10 +18,10 @@ self.name - имя, self.number_of_floors - кол-во этажей
 class House:
     def __init__(self, name, number_of_floors):
         self.name = name
-        self.floors = number_of_floors
+        self.number_of_floors = number_of_floors
 
     def go_to(self, new_floor):
-        if new_floor <= self.floors and new_floor > 0:
+        if new_floor <= self.number_of_floors and new_floor > 0:
             for floor in range(1, new_floor + 1):
                 print(floor)
         else:
