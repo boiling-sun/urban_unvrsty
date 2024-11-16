@@ -7,10 +7,10 @@ __str__(self) - должен возвращать строку: "Названи�
 
 """
 
-from module_5_1 import House
+from module_5_1 import House_1
 
 
-class House(House):
+class House_2(House_1):
     def __len__(self):
         return self.number_of_floors
 
@@ -18,8 +18,8 @@ class House(House):
         return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'
     
 def main():
-    h1 = House('ЖК Эльбрус', 10)
-    h2 = House('ЖК Акация', 20)
+    h1 = House_2('ЖК Эльбрус', 10)
+    h2 = House_2('ЖК Акация', 20)
 
     # __str__
     print(h1) # Название: ЖК Эльбрус, кол-во этажей: 10

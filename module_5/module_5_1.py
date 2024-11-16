@@ -15,7 +15,7 @@ self.name - имя, self.number_of_floors - кол-во этажей
 Вызовите метод go_to у этого объекта с произвольным числом.
 """
 
-class House:
+class House_1:
     def __init__(self, name, number_of_floors):
         self.name = name
         self.number_of_floors = number_of_floors
@@ -29,8 +29,8 @@ class House:
 
 
 def main():
-    h1 = House('ЖК Горский', 18)
-    h2 = House('Домик в деревне', 2)
+    h1 = House_1('ЖК Горский', 18)
+    h2 = House_1('Домик в деревне', 2)
     h1.go_to(5)
     h2.go_to(10)
 
