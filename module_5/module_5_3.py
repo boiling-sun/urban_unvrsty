@@ -1,4 +1,5 @@
 """
+Полный код для класса 'House'
 Необходимо дополнить класс House следующими специальными методами:
 __eq__(self, other) - должен возвращать True, если количество этажей одинаковое у self и у other.
 Методы __lt__(<), __le__(<=), __gt__(>), __ge__(>=), __ne__(!=) должны присутствовать в классе и возвращать 
@@ -14,44 +15,58 @@ isinstance(other, int) - other указывает на объект типа int
 isinstance(other, House) - other указывает на объект типа House.
 """
 
-from module_5_2 import House_2
+class House:
+    def __init__(self, name, number_of_floors):
+        self.name = name
+        self.number_of_floors = number_of_floors
+
+    def go_to(self, new_floor):
+        if new_floor <= self.number_of_floors and new_floor > 0:
+            for floor in range(1, new_floor + 1):
+                print(floor)
+        else:
+            print("Такого этажа не существует")
 
 
-class House_3(House_2):
+    def __len__(self):
+        return self.number_of_floors
+
+    def __str__(self):
+        return f'Название: {self.name}, кол-во этажей: {self.number_of_floors}'
 
     @staticmethod
     def is_house(object):
         """ Возвращает True, если количество этажей одинаковое у self и у other."""
-        return isinstance(object, House_2)
+        return isinstance(object, House)
     
     def __eq__(self, other):
         """ Возвращает True, если количество этажей одинаковое у self и у other."""
-        if House_3.is_house(other):
+        if House.is_house(other):
             return self.number_of_floors == other.number_of_floors
 
     def __lt__(self, other):
         """ Возвращает True, если количество этажей у self меньше, чем у other."""
-        if House_3.is_house(other):
+        if House.is_house(other):
             return self.number_of_floors < other.number_of_floors
 
     def __le__(self, other):
         """ Возвращает True, если количество этажей у self меньше либо равно other."""
-        if House_3.is_house(other):
+        if House.is_house(other):
             return self.number_of_floors <= other.number_of_floors
 
     def __gt__(self, other):
         """ Возвращает True, если количество этажей у self больше, чем у other."""
-        if House_3.is_house(other):
+        if House.is_house(other):
             return self.number_of_floors > other.number_of_floors
 
     def __ge__(self, other):
         """ Возвращает True, если количество этажей у self больше либо равно other."""
-        if House_3.is_house(other):
+        if House.is_house(other):
             return self.number_of_floors >= other.number_of_floors
 
     def __ne__(self, other):
         """ Возвращает True, если количество этажей разное у self и у other."""
-        if House_3.is_house(other):
+        if House.is_house(other):
             return self.number_of_floors != other.number_of_floors
 
     def __add__(self, value):
@@ -78,8 +93,8 @@ class House_3(House_2):
         return self.__add__(value)    
 
 def main():
-    h1 = House_3('ЖК Эльбрус', 10)
-    h2 = House_3('ЖК Акация', 20)
+    h1 = House('ЖК Эльбрус', 10)
+    h2 = House('ЖК Акация', 20)
 
     print(h1) # Название: ЖК Эльбрус, кол-во этажей: 10
     print(h2) # Название: ЖК Акация, кол-во этажей: 20
