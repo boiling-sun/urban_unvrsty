@@ -123,9 +123,6 @@ class UrTube:
         self.videos = []
         self.current_user = None
 
-    def __repr__(self):
-        return f'UrTube(users={self.users}, videos={self.videos}, current_user={self.current_user}, _current_user={self._current_user})'
-
     def __contains__(self, item):
         return any(user.username == item for user in self.users) or any(video.title == item for video in self.videos)
 
